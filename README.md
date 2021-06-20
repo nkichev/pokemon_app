@@ -16,7 +16,7 @@ application up and running.
 * `bin/rails db:create db:migrate db:seed`
 * `bin/rails db:migrate db:seed RAILS_ENV=test`
 * `bin/rails s`
-* navigate to `localhost:3000` in your browser
+* navigate to `localhost:3000` in your browser.
 
 >[!NOTE]
 >
