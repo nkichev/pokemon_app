@@ -12,7 +12,7 @@ application up and running.
 
 ### Application Setup:
 
-* `bundle install`
+* `bundle installl`
 * `bin/rails db:create db:migrate db:seed`
 * `bin/rails db:migrate db:seed RAILS_ENV=test`
 * `bin/rails s`
