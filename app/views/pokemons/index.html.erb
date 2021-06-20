@@ -1,0 +1,33 @@
+<div class='container'>
+  <% if @pokemons.any? %>
+    <div class="row">
+      <% @pokemons.each do |pokemon| %>
+        <div class='col-sm-3 pb-3'>
+          <div class="card">
+            <%= image_tag(pokemon.avatar, class: 'img-fluid') if pokemon.avatar.attached? %>
+            <div class="card-body">
+              <h4 class="card-title"><%= pokemon.name %></h4>
+              <p class="card-text">
+                <table class="table table-bordered">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h5>Height</h5><%= "#{pokemon.height}" %></td>
+                      <td><h5>Weight</h5><%= "#{pokemon.weight}" %></td>
+                    </tr>
+                    <tr>
+                      <td class='show_btn'><%= link_to 'Show', pokemon_path(pokemon) %></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% elsif Pokemon.count.zero? %>
+    <h4>Please run the migrations</h4>
+  <% end %>
+<div>
